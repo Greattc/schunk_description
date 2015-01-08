@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="Lwa" >
+
+    <xacro:property name="M_PI" value="3.1415926535898"/>
+    <!-- controller manager -->
+    <xacro:include filename="$(find schunk_description)/urdf/common/common.urdf.xacro" />
+    <!-- schunk lwa -->
+    <xacro:include filename="$(find schunk_description)/urdf/lwa/macro_lwa7.urdf.xacro" />
+
+    <link name="world"/>
+
+    <!-- LWA -->
+    <xacro:schunk_lwa name="arm" parent="world">
+        <origin xyz="0 0 0" rpy="0 0 0"/> 
+    </xacro:schunk_lwa>
+
+</robot>

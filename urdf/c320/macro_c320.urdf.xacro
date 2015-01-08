@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" >
+
+  <xacro:macro name="schunk_c320" params="parent">
+
+  <joint name="c320_fix" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="${parent}"/>
+    <child link="c320"/>
+  </joint>
+
+  <link name="c320">
+    <inertial>
+      <origin xyz="0 0 0" />
+      <mass value="5000" />
+      <inertia ixx="100.0" ixy="00.0" ixz="0.0" iyy="100.0" iyz="0.0" izz="100.0" />
+    </inertial>
+
+    <visual>
+      <origin xyz="0 0 0" />
+      <geometry>
+      	<mesh filename="package://schunk_description/meshes/c320/c320.dae" />
+      </geometry>
+     </visual>
+
+    <collision>
+      <origin xyz="0 0 0" />
+      <geometry> 
+      	<mesh filename="package://schunk_description/meshes/c320/c320.dae" />
+      </geometry>
+    </collision>
+
+  </link>
+
+  </xacro:macro>
+
+</robot>

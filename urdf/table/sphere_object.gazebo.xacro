@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+	<gazebo reference="sphere_object">
+	<material>Gazebo/Red</material>
+	<gravity>true</gravity>
+	<selfCollide>true</selfCollide>
+	<mu1>0.5</mu1>
+    <mu2>0.1</mu2>
+	</gazebo>
+
+	<gazebo reference="sphere">
+	<material>Gazebo/Red</material>
+	<gravity>true</gravity>
+	<selfCollide>true</selfCollide>
+	<mu1>0.5</mu1>
+    <mu2>0.1</mu2>
+	</gazebo>	
+
+</robot>

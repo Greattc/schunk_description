@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+
+<robot xmlns:sensor="http://playerstage.sourceforge.net/gazebo/xmlschema/#sensor"
+       xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"
+       xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
+       xmlns:xacro="http://ros.org/wiki/xacro">
+
+	<xacro:macro name="schunk_lwa_gazebo" params="name">
+
+	<gazebo reference="${name}_1_link">
+		<dampingFactor>0.01</dampingFactor>
+		<gravity>true</gravity>
+		<selfCollide>true</selfCollide>
+		<mu1>0.5</mu1>
+    <mu2>0.5</mu2>
+	</gazebo>
+
+	<gazebo reference="${name}_2_link">
+		<dampingFactor>0.01</dampingFactor>
+		<gravity>true</gravity>
+		<selfCollide>true</selfCollide>
+		<mu1>0.5</mu1>
+    <mu2>0.5</mu2>
+	</gazebo>
+
+	<gazebo reference="${name}_3_link">
+		<dampingFactor>0.01</dampingFactor>
+		<gravity>true</gravity>
+		<selfCollide>true</selfCollide>
+		<mu1>0.5</mu1>
+    <mu2>0.5</mu2>
+	</gazebo>
+
+	<gazebo reference="${name}_4_link">
+		<dampingFactor>0.01</dampingFactor>
+		<gravity>true</gravity>
+		<selfCollide>true</selfCollide>
+		<mu1>0.5</mu1>
+    <mu2>0.5</mu2>
+	</gazebo>
+
+	<gazebo reference="${name}_5_link">
+		<dampingFactor>0.01</dampingFactor>
+		<gravity>true</gravity>
+		<selfCollide>true</selfCollide>
+		<mu1>0.5</mu1>
+    <mu2>0.5</mu2>
+	</gazebo>
+
+	<gazebo reference="${name}_6_link">
+		<dampingFactor>0.01</dampingFactor>
+		<gravity>true</gravity>
+		<selfCollide>true</selfCollide>
+		<mu1>0.5</mu1>
+    <mu2>0.5</mu2>
+	</gazebo>
+
+	<gazebo reference="${name}_7_link">
+		<dampingFactor>0.01</dampingFactor>
+		<gravity>true</gravity>
+		<selfCollide>true</selfCollide>
+		<mu1>0.5</mu1>
+    <mu2>0.5</mu2>
+	</gazebo>
+
+	<gazebo reference="${name}_force_sensor">
+		<dampingFactor>0.01</dampingFactor>
+		<gravity>true</gravity>
+<!--
+		<plugin name="schunk_yarp_gazebo_plugin_torque" filename="libgazebo_yarp_jointsensors.so">
+    	<yarpConfigurationFile>package://schunk_description/meshes/lwa/schunk_gazebo_torque.ini</yarpConfigurationFile>
+		</plugin>
+
+			<sensor name='${name}_force_sensor' type='force_torque'>
+				<always_on>true</always_on>
+				<update_rate>10</update_rate>				
+				<plugin name="${name}_force_sensor" filename="libgazebo_ros_force.so">
+					<bodyName>${name}_force_sensor</bodyName>
+					<frameName>${name}_force_sensor</frameName>
+					<topicName>${name}_force_wrench</topicName>
+				</plugin>
+			</sensor>
+-->	
+	</gazebo>
+
+
+	<gazebo reference="${name}_1_joint">
+		<stopKd value="1.0" />
+		<stopKp value="1000.0" />
+	</gazebo>	
+	
+	<gazebo reference="${name}_2_joint">
+		<stopKd value="1.0" />
+		<stopKp value="1000.0" />
+	</gazebo>
+	
+	<gazebo reference="${name}_3_joint">
+		<stopKd value="1.0" />
+		<stopKp value="1000.0" />
+	</gazebo>
+	
+	<gazebo reference="${name}_4_joint">
+		<stopKd value="1.0" />
+		<stopKp value="1000.0" />
+	</gazebo>
+	
+	<gazebo reference="${name}_5_joint">
+		<stopKd value="1.0" />
+		<stopKp value="1000.0" />
+	</gazebo>
+	
+	<gazebo reference="${name}_6_joint">
+		<stopKd value="1.0" />
+		<stopKp value="1000.0" />
+	</gazebo>
+	
+	<gazebo reference="${name}_7_joint">
+		<stopKd value="1.0" />
+		<stopKp value="1000.0" />
+	</gazebo>
+	</xacro:macro>
+
+</robot>

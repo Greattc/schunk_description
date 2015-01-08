@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+	<gazebo reference="cup">
+	<material>Gazebo/Yellow</material>
+	<gravity>true</gravity>
+	<selfCollide>true</selfCollide>
+	<dampingFactor>0.02</dampingFactor>
+    <mu1>400</mu1>
+    <mu2>400</mu2>
+	</gazebo>
+		
+</robot>
